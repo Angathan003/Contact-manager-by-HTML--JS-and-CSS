@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contacts Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Contacts Management System</h1>
+    <form id="addContactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required><br>
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone"><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email"><br>
+        <label for="category">Category:</label>
+        <input type="text" id="category"><br>
+        <button type="submit">Add Contact</button>
+    </form>
+    <br>
+    <form id="searchForm">
+        <label for="search_term">Search:</label>
+        <input type="text" id="search_term">
+        <button type="submit">Search</button>
+    </form>
+    <div id="searchResults"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
