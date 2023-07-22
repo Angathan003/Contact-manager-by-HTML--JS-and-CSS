@@ -1,21 +1,80 @@
+/* Global styles */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
-    margin-top: 20px;
+    margin-top: 30px;
+    color: #333;
 }
 
 form {
     margin-top: 20px;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 input, button {
     margin: 5px;
-    padding: 5px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
 }
 
 #searchResults {
     margin-top: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
 }
+
+#searchResults ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#searchResults li {
+    margin-bottom: 10px;
+}
+
+#searchResults li:last-child {
+    margin-bottom: 0;
+}
+
+#searchResults li::before {
+    content: "\2022";
+    color: #007bff;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+#searchResults li span {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+#searchResults .no-matches {
+    color: #ff4500;
+    font-style: italic;
+}
+
