@@ -116,12 +116,17 @@ function promptPreviousInformation(contact) {
     return { name, phone, email, category };
 }
 
-// Modify the addContact function to save contact to Local Storage
 function addContact(name, phone, email, category) {
+    // Validate email format
+    if (!email || !email.includes('@')) {
+        console.log('Error: Please enter a valid email address.');
+        return;
+    }
+
     const contactData = {
-        name: name,
+        name: name.toUpperCase(),
         phone: phone,
-        email: email,
+        email: email.toLowerCase(),
         category: category
     };
 
@@ -138,6 +143,7 @@ function addContact(name, phone, email, category) {
     // Inform the user that the contact has been added
     console.log('Contact added successfully.');
 }
+
 
 // Event listeners remain the same for adding contacts and searching
 document.getElementById('addContactForm').addEventListener('submit', function (event) {
