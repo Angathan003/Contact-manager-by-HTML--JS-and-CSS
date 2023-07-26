@@ -52,9 +52,9 @@ button:hover {
     margin: 0 auto;
     text-align: left;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #f30c0c;
     border-radius: 5px;
-    background-color: #fff;
+    background-color: #dfe793;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 

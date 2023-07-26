@@ -122,7 +122,14 @@ function addContact(name, phone, email, category) {
         console.log('Error: Please enter a valid email address.');
         return;
     }
-
+      // Check if the email contains "gmail" without "@"
+      if (email.toLowerCase().includes('gmail') && !email.includes('@')) {
+        // Highlight the email input box in red
+        document.getElementById('email').style.borderColor = 'red';
+        console.log('Error: Gmail address must contain "@" symbol.');
+        return;
+    }
+    
     const contactData = {
         name: name.toUpperCase(),
         phone: phone,
